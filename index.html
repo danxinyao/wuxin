@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="box">你好啊啊啊啊啊</div>
+	<div class="name">
+		44444
+	</div>
+<!-- 	<script>
+/*var viewport = document.documentElement;
+var width = viewport.clientWidth;
+var fontSize = width/20;
+viewport.style.foenSize = fontSize + 'px'*/
+document.documentElement.style.foenSize = document.documentElement.clientWidth/20 +'px'
+</script> -->
+<script>
+	(function (doc, win) {
+		var docEl = doc.documentElement, resizeEvt ='orientationchange'in window ? 'orientationchange':'resize', recalc = function () {
+			var clientWidth = docEl.clientWidth;
+			if (!clientWidth) return;
+			docEl.style.fontSize = clientWidth / 20 + 'px';
+		};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	}
+	)(document, window);
+</script>
+
+</body>
+</html>

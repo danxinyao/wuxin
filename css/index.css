@@ -1,0 +1,18 @@
+@import url('adapater.css');
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  font-size: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid red;
+}
+.name {
+  width: 6.25rem;
+  height: 10rem;
+  border: 1px solid red;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=index.css.map */
